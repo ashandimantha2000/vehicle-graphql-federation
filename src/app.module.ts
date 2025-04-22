@@ -19,11 +19,10 @@ import { IntrospectAndCompose } from '@apollo/gateway';
       gateway: {
         //a new adition
         supergraphSdl: new IntrospectAndCompose({
-          //serviceList => subgraphs
-          subgraphs: [
+            //serviceList => subgraphs
+            subgraphs: [
             { name: 'vehicle-service', url: 'http://localhost:3000/graphql' },
-            { name: 'service-record-service', url: 'http://localhost:3002/graphql' },
-            // { name: 'batch-processor', url: 'http://localhost:3001/' },
+            { name: 'service-record-service', url: 'http://localhost:3002/graphql' }
           ],
         }),
       },
